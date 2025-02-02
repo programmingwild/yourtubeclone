@@ -4,9 +4,12 @@ import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import VideoGrid from "./components/VideoGrid";
 import VideoPlayer from "./components/VideoPlayer";
+import Premium from "./components/Premium";
+import { Buffer } from 'buffer'; 
 import "./styles/global.css";
 
 const App = () => {
+  global.Buffer = Buffer;
   const [isSidebarCollapsed, setSidebarCollapsed] = useState(false);
 
   // Toggle sidebar state
@@ -23,6 +26,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<VideoGrid />} />
             <Route path="/video/:videoId" element={<VideoPlayer />} />
+            <Route path="/premium" element={<Premium />} />
           </Routes>
         </div>
       </div>

@@ -16,6 +16,7 @@ import {
   MdOutlineLiveTv,
   MdOutlineFeedback,
 } from "react-icons/md";
+import { SiYoutubeshorts } from "react-icons/si";
 import { IoMusicalNotes, IoHelpCircleOutline } from "react-icons/io5";
 import { useSidebar } from "../components/SidebarContext";
 import styles from "../styles/Sidebar.module.css";
@@ -40,7 +41,7 @@ const Sidebar = () => {
           {!isCollapsed && "Home"}
         </li>
         <li>
-          <MdOutlineShortText className={`${styles.icon} ${isCollapsed ? styles.collapsedIcon : ""}`} />
+          <SiYoutubeshorts className={`${styles.icon} ${isCollapsed ? styles.collapsedIcon : ""}`} />
           {!isCollapsed && "Shorts"}
         </li>
         <li>
