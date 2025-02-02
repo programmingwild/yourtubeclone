@@ -1,0 +1,26 @@
+.video-player-container {
+    flex: 1;
+    padding: 20px;
+    color: white;
+  }
+  
+  .video-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .video-info {
+    max-width: 800px;
+    margin: 10px auto;
+  }
+  
+  .video-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .video-info p {
+    font-size: 14px;
+    color: #aaa;
+  }
+  
