@@ -17,28 +17,28 @@ const VideoPlayer = ({ video, onClose, onNextVideo }) => {
   const [tapCount, setTapCount] = useState(0);
   const [tapTimeout, setTapTimeout] = useState(null);
 
-  if (!video) return null; // If no video is selected, don't render the player
+  if (!video) return null;
 
   const handleLike = () => {
     setLiked(!liked);
-    if (disliked) setDisliked(false); // Remove dislike if liked
+    if (disliked) setDisliked(false);
   };
 
   const handleDislike = () => {
     setDisliked(!disliked);
-    if (liked) setLiked(false); // Remove like if disliked
+    if (liked) setLiked(false);
   };
 
   const handleShare = () => {
-    navigator.clipboard.writeText(window.location.href); // Copy video URL to clipboard
+    navigator.clipboard.writeText(window.location.href);
     alert("Link copied to clipboard!");
   };
 
   const handleDownload = () => {
-    // Check if the user is premium
+
     const isPremiumUser = localStorage.getItem("isPremiumUser") === "true";
 
-    // Check download limit for non-premium users
+
     if (!isPremiumUser) {
       const today = new Date().toLocaleDateString();
       const lastDownloadDate = localStorage.getItem("lastDownloadDate");
@@ -49,7 +49,7 @@ const VideoPlayer = ({ video, onClose, onNextVideo }) => {
         return;
       }
 
-      // Update download count and date
+
       if (lastDownloadDate !== today) {
         localStorage.setItem("lastDownloadDate", today);
         localStorage.setItem("downloadCount", "1");

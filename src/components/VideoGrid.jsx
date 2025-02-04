@@ -69,7 +69,6 @@ const VideoGrid = () => {
 
   return (
     <div className={styles.videoGrid}>
-      {/* Render Video Cards */}
       {videos.map((video) => (
         <VideoCard
           key={video.id}
@@ -77,7 +76,7 @@ const VideoGrid = () => {
           channel={video.channel}
           views={video.views}
           thumbnail={video.thumbnail}
-          onClick={() => handleVideoClick(video)} // Pass the click handler
+          onClick={() => handleVideoClick(video)}
         />
       ))}
 
