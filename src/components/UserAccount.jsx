@@ -1,23 +1,24 @@
-import React from "react";
-import { FaUser, FaSignOutAlt, FaCogs, FaLanguage, FaKeyboard, FaGlobe, FaMoon } from "react-icons/fa";
+import React , {useState} from "react";
+import { FaUser, FaSignOutAlt, FaCogs, FaLanguage, FaKeyboard, FaGlobe, FaMoon, FaTimes } from "react-icons/fa";
 import { MdEmail, MdSwitchAccount, MdDataUsage, MdHelpOutline, MdAddHome } from "react-icons/md";
 import { SiYoutubestudio } from "react-icons/si";
 import { TbPremiumRights } from "react-icons/tb";
 import styles from "../styles/UserAccount.module.css";
 import Razorpay from "razorpay";
 
-const UserAccount = () => {
+const UserAccount = ({onClose}) => {
+  const [showUserAccount, setShowUserAccount] = useState(false);
 
   const handlePremiumClick = () => {
-    const options = {
-      key: "YOUR_RAZORPAY_TEST_KEY", // Replace with your Razorpay key
-      amount: 19900, // 199 INR (in paisa)
+    const razorpay = new window.Razorpay({
+      key: "rzp_test_Tnu5VHAQ0C6F9O",
+      amount: 19900, //
       currency: "INR",
       name: "Premium Plan",
       description: "Unlimited Downloads for 1 Month",
       handler: function (response) {
         alert("Payment Successful! You can now download unlimited videos.");
-        localStorage.setItem("isPremiumUser", "true"); // Set premium status
+        localStorage.setItem("isPremiumUser", "true");
       },
       prefill: {
         name: "Ethan Carter",
@@ -27,14 +28,27 @@ const UserAccount = () => {
       theme: {
         color: "#F37254",
       },
-    };
-
-    const razorpay = new Razorpay(options);
+      modal: {
+        ondismiss: function () {
+          alert("Payment window closed. Try again if you wish to upgrade.");
+        },
+      },
+    });
+  
     razorpay.open();
   };
+  
+  const handleClose = () => {
+    setShowUserAccount(false);
+  };
+  
 
   return (
     <div className={styles.userAccount}>
+        <button className={styles.closeButton} onClick={handleClose}>
+          <FaTimes className={styles.closeIcon} />
+        </button>
+
       <div className={styles.userInfo}>
         <FaUser className={styles.icon} />
         <div>

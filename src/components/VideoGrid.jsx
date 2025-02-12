@@ -3,6 +3,7 @@ import styles from "../styles/VideoGrid.module.css";
 import VideoCard from "./VideoCard";
 import VideoPlayer from "./VideoPlayer"; // Import the VideoPlayer component
 import { useNavigate } from "react-router-dom";
+import sample1 from "../videos/sample1.mp4"; 
 
 const VideoGrid = () => {
   const [selectedVideo, setSelectedVideo] = useState(null); // State to track the selected video
@@ -15,7 +16,7 @@ const VideoGrid = () => {
       channel: "CodeAcademy",
       views: "1.2M",
       thumbnail: "https://images.unsplash.com/photo-1541877944-ac82a091518a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4", // Add video URL
+      videoUrl: sample1, // Add video URL
     },
     {
       id: 2,
@@ -66,26 +67,28 @@ const VideoGrid = () => {
   const handleClosePlayer = () => {
     setSelectedVideo(null); // Close the video player
   };
-
   return (
     <div className={styles.videoGrid}>
       {videos.map((video) => (
-        <VideoCard
-          key={video.id}
-          title={video.title}
-          channel={video.channel}
-          views={video.views}
-          thumbnail={video.thumbnail}
-          onClick={() => handleVideoClick(video)}
+        <VideoCard 
+          key={video.id} 
+          title={video.title} 
+          channel={video.channel} 
+          views={video.views} 
+          thumbnail={video.thumbnail} 
+          onClick={() => handleVideoClick(video)} 
         />
       ))}
 
-      {/* Render Video Player Modal */}
       {selectedVideo && (
-        <VideoPlayer video={selectedVideo} onClose={handleClosePlayer} />
+        <VideoPlayer 
+          video={selectedVideo} 
+          videos={videos} // ✅ Pass videos list
+          setSelectedVideo={setSelectedVideo} // ✅ Pass state updater
+          onClose={handleClosePlayer} 
+        />
       )}
     </div>
   );
 };
-
 export default VideoGrid;

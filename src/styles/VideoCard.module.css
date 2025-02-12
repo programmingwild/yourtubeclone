@@ -9,8 +9,8 @@
 }
 
 .videoCard:hover {
-  transform: translateY(-8px);
-  box-shadow: 0px 8px 16px rgba(255, 0, 0, 0.4);
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 24px rgba(255, 0, 0, 0.4);
 }
 
 .thumbnail {

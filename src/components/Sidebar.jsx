@@ -23,19 +23,18 @@ import styles from "../styles/Sidebar.module.css";
 
 const Sidebar = () => {
   const { isCollapsed } = useSidebar();
-  // Sample subscriptions with icons
   const subscriptions = [
-    { name: "Channel 1", icon: <FaUserCircle /> },
-    { name: "Channel 2", icon: <FaUserCircle /> },
-    { name: "Channel 3", icon: <FaUserCircle /> },
-    { name: "Channel 4", icon: <FaUserCircle /> },
-    { name: "Channel 5", icon: <FaUserCircle /> },
+    { name: "YouTube Channel 1", icon: <FaUserCircle /> },
+    { name: "YouTube Channel 2", icon: <FaUserCircle /> },
+    { name: "YouTube Channel 3", icon: <FaUserCircle /> },
+    { name: "YouTube Channel 4", icon: <FaUserCircle /> },
+    { name: "YouTube Channel 5", icon: <FaUserCircle /> },
+    { name: "YouTube Channel 6", icon: <FaUserCircle /> },
   ];
 
   return (
     <div className={`${styles.sidebar} ${isCollapsed ? styles.collapsed : ""}`}>
       <ul>
-        {/* Main Navigation */}
         <li>
           <FaHome className={`${styles.icon} ${isCollapsed ? styles.collapsedIcon : ""}`} />
           {!isCollapsed && "Home"}
@@ -50,7 +49,6 @@ const Sidebar = () => {
         </li>
         <hr />
 
-        {/* You Section */}
         {!isCollapsed && <li className={styles.sectionHeader}>You</li>}
         <li>
           <FaHistory className={`${styles.icon} ${isCollapsed ? styles.collapsedIcon : ""}`} />

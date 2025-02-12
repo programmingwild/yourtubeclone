@@ -1,4 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+[submodule "client/yourtubeclone"]
+  path = client/yourtubeclone
+  url = https://github.com/yourusername/yourtubeclone.git
 
 # dependencies
 /node_modules
