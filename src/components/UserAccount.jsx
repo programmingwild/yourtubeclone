@@ -45,13 +45,13 @@ const UserAccount = ({onClose}) => {
 
   return (
     <div className={styles.userAccount}>
-        <button className={styles.closeButton} onClick={handleClose}>
-          <FaTimes className={styles.closeIcon} />
-        </button>
+      
 
       <div className={styles.userInfo}>
         <FaUser className={styles.icon} />
         <div>
+          <div className={styles.sampleMessage}>Please Tap on Empty Spaces To Exit</div>
+          <div className={styles.sampleMessage}>----------------------------------</div>
           <p className={styles.userName}>Ethan Carter</p>
           <p className={styles.userEmail}>ethancarter@gmail.com</p>
         </div>
