@@ -12,6 +12,7 @@
   position: relative; /* To position the exit icon */
 }
 
+
 /* Hover Effect for User Account */
 .userAccount:hover {
   box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
