@@ -1,9 +1,13 @@
-1. Introduction
+Deployed Website Link: https://yourtubeclone-t12c.vercel.app/
+
+Introduction
+
 The YourTube Clone is a React.js-based video streaming platform inspired by YouTube. The goal of this project was to build a functional video-sharing application that allows users to browse, watch, and interact with videos. The platform also integrates video downloads, comments, private room chats, and a subscription model for premium features.
 
 This project was developed using React.js, Redux, React Router, React Player, WebSockets, and Razorpay for payments.
 
-2. Background
+Background
+
 The motivation behind this project was to gain hands-on experience in building a full-fledged video streaming platform while implementing modern web development concepts like:
 
 State management (Redux)
@@ -14,7 +18,8 @@ Real-time messaging (WebSockets)
 Payment integration (Razorpay)
 Additionally, the project focused on performance optimization, user experience, and security to ensure a smooth and engaging platform for users.
 
-3. Learning Objectives
+Learning Objectives
+
 By working on this project, the key learning objectives were:
 ✔ Understanding React.js and Redux for state management.
 ✔ Implementing video playback features using React Player.
@@ -24,7 +29,8 @@ By working on this project, the key learning objectives were:
 ✔ Deploying the application on GitHub and Netlify.
 ✔ Managing a project using Git and version control.
 
-4. Activities and Tasks
+Activities and Tasks
+
 The development of YourTube involved several major tasks:
 
 ✅ Project Setup – Initialized the React.js project, installed dependencies, and set up Redux.
@@ -43,37 +49,43 @@ The development of YourTube involved several major tasks:
 
 ✅ Deployment – Uploaded the project to GitHub and deployed it on Netlify.
 
-5. Skills and Competencies
+Skills and Competencies
+
 During this project, several key technical and soft skills were developed:
 
 Technical Skills
+
 🔹 React.js & Redux – Component-based architecture, state management, and hooks.
 🔹 React Router – Navigation between pages and video links.
 🔹 React Player – Custom video controls, seeking, and playback speed.
 🔹 WebSockets – Real-time messaging for private chat rooms.
 🔹 Razorpay API – Payment integration for premium features.
 🔹 Git & GitHub – Version control, branches, commits, and deployment.
-🔹 Netlify Deployment – Hosting and resolving deployment issues.
+🔹 Vercel Deployment – Hosting and resolving deployment issues.
 
 Soft Skills
+
 ✔ Problem-solving – Debugging and troubleshooting issues.
 ✔ Time management – Organizing tasks to meet deadlines.
 ✔ Collaboration – Understanding APIs, payment gateways, and third-party services.
 ✔ Adaptability – Learning and implementing new technologies.
 
-6. Feedback and Evidence
+Feedback and Evidence
+
 The project was tested by multiple users, and the feedback was positive:
 ⭐ Smooth and responsive UI.
 ⭐ Video playback with advanced controls was well-received.
 ⭐ Private chat room feature was unique and engaging.
 ⭐ The premium download system with Razorpay was functional.
 
-Screenshots, GitHub commits, and live Netlify deployment serve as evidence of successful completion.
+Screenshots, GitHub commits, and live Vercel deployment serve as evidence of successful completion.
 
-7. Challenges and Solutions
+Challenges and Solutions
+
 Several challenges were encountered during the development process:
 
 Challenges	Solutions
+
 Git & GitHub Issues (Submodule errors)	Removed submodule using git rm --cached and re-initialized repo.
 Netlify Deployment Errors	Fixed .gitmodules issue and ensured correct build settings.
 React Player Controls	Added gesture-based controls and improved UI responsiveness.
@@ -81,14 +93,16 @@ WebSocket Implementation	Used Socket.io for real-time chat and tested different 
 Razorpay Integration	Configured API keys properly and tested different payment scenarios.
 Each problem provided an opportunity to learn debugging strategies and enhance problem-solving skills.
 
-8. Outcomes and Impact
+Outcomes and Impact
+
 🚀 Successfully built and deployed a fully functional video streaming platform.
 🎯 Learned and applied React.js, Redux, WebSockets, and Razorpay API.
 🔧 Improved skills in frontend development, debugging, and deployment.
 🛠 Gained experience with Git version control and Netlify hosting.
 💡 Created a project that can be expanded into a real-world application.
 
-9. Conclusion
+Conclusion
+
 The YourTube project was a challenging yet rewarding experience. It provided hands-on knowledge of React.js, video streaming technologies, and payment integration.
 
 This project strengthened core web development skills and built confidence in deploying full-stack applications. Moving forward, the application could be enhanced with user authentication, live streaming, and AI-based recommendations.
